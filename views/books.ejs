@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<a href="/dashboard">Home</a>
+<a href="/books">View Books</a>
+<table class="table table-inverse">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Category</th>
+          <th colspan="2">Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% for(var i=0; i < booksList.length; i++) { %>
+       <tr>
+
+         <td><%= booksList[i].id %></td>
+         <td><%= booksList[i].title %></td>
+         <td><%= booksList[i].author %></td>
+         <td><%= booksList[i].category %></td>
+         <td><a href="/editForm/<%= booksList[i].id %>">Edit</a></td>
+         <td><a href="/book/<%= booksList[i].id%>?_method=DELETE">Delete</a></td>
+       </tr>
+    <% } %>
+      </tbody>
+
+    </table>
+</body>
+</html>
