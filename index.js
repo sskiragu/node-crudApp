@@ -46,6 +46,10 @@ app.get('/dashboard', (req,res)=>{
 	res.sendFile(__dirname + '/' + 'dashboard.html');
 });
 
+app.get('/register', (req,res)=>{
+	res.sendFile(__dirname + '/' + 'register.html');
+});
+
 app.get('/editForm/:id', (req,res)=>{
 	Book.findOne({
 		_id:req.params.id
@@ -105,7 +109,7 @@ app.post('/book', (req, res)=>{
 		if (err) {
 			res.send('Error saving book');
 		}else{
-			res.send(book);
+			res.redirect('/');
 		}
 	});
 });
