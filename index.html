@@ -1,33 +1,348 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<style type="text/css">
-	.login-input{
-		margin-left: 12%;
-		padding: 1%;
-	}
-	</style>
-</head>
-<body>
-	<h3>Login or <a href="/register">Register here</a></h3>
-<form action="/dashboard" method="GET">
-	<div >
-		
-		<div class="login-input">
-			<input type="text" name="username">
-		</div>
-		
-	</div>
-	<div >
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<div class="login-input">
-			<input type="password" name="password">
-		</div>
-	</div>
-	<div class="login-input">
-		<input type="submit" name="login" value="login">
-	</div>
-</form>
-</body>
+    <style type="text/css">
+      .my-banner{
+        background-image: url('../img/bg.jpg');
+          background-size: 100%;
+      }
+
+      .fresh-content{
+    background: linear-gradient(to right, red , blue);
+}
+    </style>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/0ecff1e9e1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <!-- navbar start here -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand mb-3" href="#">IST</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto container-fluid">
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-list"></i>Categories
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+
+            <li class="nav-item col-8">
+                    <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control form-control-lg mr-sm-0 col-8" type="search" placeholder="Search for courses" aria-label="Search">
+                            <button class="btn btn-light my-2 my-sm-0 col-2" type="submit"><i class="fas fa-search"></i></button>
+                          </form>
+            </li>
+                  
+          </ul>
+          
+                <a class="nav-link btn btn-light mr-2" href="#">IST for Business</a>
+                <a class="nav-link btn btn-light mr-2" href="#">Become an Instructor</a>
+                <a class="nav-link btn btn-light mr-2" href="#"><i class="fas fa-shopping-cart"></i></a>
+                <a class="nav-link btn btn-outline-dark mr-2" href="">Login</a>
+                <a class="nav-link btn btn-danger" href="/register">SignUp</a>
+          
+        </div>
+      </nav>
+    <!-- navbar ends here -->
+
+    <!--Jumbotron starts here  -->
+    <div class="jumbotron my-banner mb-0" style="height: 500px; padding-top: 150px;">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col">
+
+            <div class="col-5 text-light">
+            <h1 class="display-5">Too good to end yet</h1>
+      <p class="lead">We added 1 more day of our best prices — as low as $9.99! Ends today.</p>
+    </div>
+    <div class="col-6">
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control form-control-lg mr-sm-0 col-8" type="search" placeholder="What do you want to learn?" aria-label="Search">
+        <button class="btn btn-light my-2 my-sm-0 col-2" type="submit"><i class="fas fa-search"></i></button>
+      </form>
+      </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Jumbotron ends here -->
+
+    <!-- start -->
+    <div class="fresh-content text-light py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="media">
+              <i class="far fa-play-circle mr-3 display-4"></i>
+              <div class="media-body">
+                <h5 class="mt-0">Requirements</h5>
+                A computer on which you can install software (Windows, MacOS, or Linux).
+              </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="media">
+                <i class="fas fa-award mr-3 display-4"></i>
+                <div class="media-body">
+                  <h5 class="mt-0">Requirements</h5>
+                  A computer on which you can install software (Windows, MacOS, or Linux).
+                </div>
+              </div>
+          </div>
+          <div class="col">
+              <div class="media">
+                  <i class="fas fa-expand-arrows-alt mr-3 display-4"></i>
+                  <div class="media-body">
+                    <h5 class="mt-0">Requirements</h5>
+                    A computer on which you can install software (Windows, MacOS, or Linux).
+                  </div>
+                </div>
+            </div>
+        
+      </div>
+    </div>
+  </div>
+    <!-- end here -->
+
+    <!-- Card one start here  -->
+
+    <div class="container mt-5">
+      <h3>
+          <small class="text-muted">Top Courses in the market</small>
+        </h3>
+        <div class="card-deck">
+            <div class="card mx-1" style="height: 300px;">
+              <img src="img/course_01.jpg" class="card-img-top h-25" alt="...">
+              <div class="card-body px-2">
+                <h6 class="card-title">The Complete Node.js Developer Course (3rd...</h6>
+                <p class="card-text" style="font-size:11px;">Andrew Mead, Rob Percival</p>
+                <p class="card-text"><small class="text-muted">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star-half text-warning"></i>
+                  4.5 (18, 560)</small>
+                  <span class="d-block"></span>
+                  <span class="float-right">
+                  <small style="text-decoration: line-through;" class="text-muted">$199.99</small> $9.99</p>
+                  </span>
+                  
+              </div>
+            </div>
+
+            <div class="card mx-1" style="height: 300px;">
+                <img src="img/course_02.jpg" class="card-img-top h-25" alt="...">
+                <div class="card-body px-2">
+                  <h6 class="card-title">The Complete Node.js Developer Course (3rd...</h6>
+                  <p class="card-text" style="font-size:11px;">Andrew Mead, Rob Percival</p>
+                  <p class="card-text"><small class="text-muted">
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star-half text-warning"></i>
+                    4.5 (18, 560)</small>
+                    <span class="d-block"></span>
+                    <span class="float-right">
+                    <small style="text-decoration: line-through;" class="text-muted">$199.99</small> $9.99</p>
+                    </span>
+                    
+                </div>
+              </div>
+              <div class="card mx-1" style="height: 300px;">
+                  <img src="img/course_03.jpg" class="card-img-top h-25" alt="...">
+                  <div class="card-body px-2">
+                    <h6 class="card-title">The Complete Node.js Developer Course (3rd...</h6>
+                    <p class="card-text" style="font-size:11px;">Andrew Mead, Rob Percival</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star-half text-warning"></i>
+                      4.5 (18, 560)</small>
+                      <span class="d-block"></span>
+                      <span class="float-right">
+                      <small style="text-decoration: line-through;" class="text-muted">$199.99</small> $9.99</p>
+                      </span>
+                      
+                  </div>
+                </div>
+                <div class="card mx-1" style="height: 300px;">
+                    <img src="img/course_04.jpg" class="card-img-top h-25" alt="...">
+                    <div class="card-body px-2">
+                      <h6 class="card-title">The Complete Node.js Developer Course (3rd...</h6>
+                      <p class="card-text" style="font-size:11px;">Andrew Mead, Rob Percival</p>
+                      <p class="card-text"><small class="text-muted">
+                          <i class="fas fa-star text-warning"></i>
+                          <i class="fas fa-star text-warning"></i>
+                          <i class="fas fa-star text-warning"></i>
+                          <i class="fas fa-star text-warning"></i>
+                          <i class="fas fa-star-half text-warning"></i>
+                        4.5 (18, 560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                        <small style="text-decoration: line-through;" class="text-muted">$199.99</small> $9.99</p>
+                        </span>
+                        
+                    </div>
+                  </div>
+                  <div class="card mx-1" style="height: 300px;">
+                      <img src="img/course_05.jpg" class="card-img-top h-25" alt="...">
+                      <div class="card-body px-2">
+                        <h6 class="card-title">The Complete Node.js Developer Course (3rd...</h6>
+                        <p class="card-text" style="font-size:11px;">Andrew Mead, Rob Percival</p>
+                        <p class="card-text"><small class="text-muted">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star-half text-warning"></i>
+                          4.5 (18, 560)</small>
+                          <span class="d-block"></span>
+                          <span class="float-right">
+                          <small style="text-decoration: line-through;" class="text-muted">$199.99</small> $9.99</p>
+                          </span>
+                          
+                      </div>
+                    </div>
+         
+          </div>
+    </div>
+    <!-- Card one end here -->
+
+    <!-- Card two start here -->
+    <div class="container mt-5">
+        <h3>
+            <small class="text-muted">Top Courses in the Development</small>
+          </h3>
+          <div class="card-deck">
+              <div class="card mx-1" style="height: 300px;">
+                <img src="img/course_01.jpg" class="card-img-top h-25" alt="...">
+                <div class="card-body px-2">
+                  <h6 class="card-title">The Complete Node.js Developer Course (3rd...</h6>
+                  <p class="card-text" style="font-size:11px;">Andrew Mead, Rob Percival</p>
+                  <p class="card-text"><small class="text-muted">
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star-half text-warning"></i>
+                    4.5 (18, 560)</small>
+                    <span class="d-block"></span>
+                    <span class="float-right">
+                    <small style="text-decoration: line-through;" class="text-muted">$199.99</small> $9.99</p>
+                    </span>
+                    
+                </div>
+              </div>
+  
+              <div class="card mx-1" style="height: 300px;">
+                  <img src="img/course_02.jpg" class="card-img-top h-25" alt="...">
+                  <div class="card-body px-2">
+                    <h6 class="card-title">The Complete Node.js Developer Course (3rd...</h6>
+                    <p class="card-text" style="font-size:11px;">Andrew Mead, Rob Percival</p>
+                    <p class="card-text"><small class="text-muted">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star-half text-warning"></i>
+                      4.5 (18, 560)</small>
+                      <span class="d-block"></span>
+                      <span class="float-right">
+                      <small style="text-decoration: line-through;" class="text-muted">$199.99</small> $9.99</p>
+                      </span>
+                      
+                  </div>
+                </div>
+                <div class="card mx-1" style="height: 300px;">
+                    <img src="img/course_03.jpg" class="card-img-top h-25" alt="...">
+                    <div class="card-body px-2">
+                      <h6 class="card-title">The Complete Node.js Developer Course (3rd...</h6>
+                      <p class="card-text" style="font-size:11px;">Andrew Mead, Rob Percival</p>
+                      <p class="card-text"><small class="text-muted">
+                          <i class="fas fa-star text-warning"></i>
+                          <i class="fas fa-star text-warning"></i>
+                          <i class="fas fa-star text-warning"></i>
+                          <i class="fas fa-star text-warning"></i>
+                          <i class="fas fa-star-half text-warning"></i>
+                        4.5 (18, 560)</small>
+                        <span class="d-block"></span>
+                        <span class="float-right">
+                        <small style="text-decoration: line-through;" class="text-muted">$199.99</small> $9.99</p>
+                        </span>
+                        
+                    </div>
+                  </div>
+                  <div class="card mx-1" style="height: 300px;">
+                      <img src="img/course_04.jpg" class="card-img-top h-25" alt="...">
+                      <div class="card-body px-2">
+                        <h6 class="card-title">The Complete Node.js Developer Course (3rd...</h6>
+                        <p class="card-text" style="font-size:11px;">Andrew Mead, Rob Percival</p>
+                        <p class="card-text"><small class="text-muted">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star-half text-warning"></i>
+                          4.5 (18, 560)</small>
+                          <span class="d-block"></span>
+                          <span class="float-right">
+                          <small style="text-decoration: line-through;" class="text-muted">$199.99</small> $9.99</p>
+                          </span>
+                          
+                      </div>
+                    </div>
+                    <div class="card mx-1" style="height: 300px;">
+                        <img src="img/course_05.jpg" class="card-img-top h-25" alt="...">
+                        <div class="card-body px-2">
+                          <h6 class="card-title">The Complete Node.js Developer Course (3rd...</h6>
+                          <p class="card-text" style="font-size:11px;">Andrew Mead, Rob Percival</p>
+                          <p class="card-text"><small class="text-muted">
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star-half text-warning"></i>
+                            4.5 (18, 560)</small>
+                            <span class="d-block"></span>
+                            <span class="float-right">
+                            <small style="text-decoration: line-through;" class="text-muted">$199.99</small> $9.99</p>
+                            </span>
+                            
+                        </div>
+                      </div>
+           
+            </div>
+      </div>
+    <!-- Card two end here -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
 </html>

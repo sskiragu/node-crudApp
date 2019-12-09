@@ -6,6 +6,8 @@ const Book = require('./Book.model');
 const methodOverride = require('method-override');
 const db = "mongodb://localhost:27017/example";
 
+ // npm run watch
+
 app.set('view engine', 'ejs');
 app.use(methodOverride('_method'));
 

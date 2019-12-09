@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	.login-input{
+		margin-left: 12%;
+		padding: 1%;
+	}
+	</style>
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<h3>Login or <a href="/register">Register here</a></h3>
+<form action="/dashboard" method="GET">
+	<div >
+		
+		<div class="login-input">
+			<input type="text" name="username">
+		</div>
+		
+	</div>
+	<div >
+
+		<div class="login-input">
+			<input type="password" name="password">
+		</div>
+	</div>
+	<div class="login-input">
+		<input type="submit" name="login" value="login">
+	</div>
+</form>
+</body>
+</html>
