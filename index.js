@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const Book = require('./Book.model');
+const Student = require('./Student.model');
 const methodOverride = require('method-override');
 const db = "mongodb://localhost:27017/example";
 
@@ -55,99 +55,102 @@ app.get('/register', (req,res)=>{
 });
 
 app.get('/editForm/:id', (req,res)=>{
-	Book.findOne({
+	Student.findOne({
 		_id:req.params.id
 	})
-	.exec((err,book)=>{
+	.exec((err,student)=>{
 		if (err) {
 			res.send('Error has occured');
 		}else{
-			res.render('edit', {id:req.params.id, title:book.title, author:book.author, category:book.category});
-			// res.json(book);
-			// res.render('search',{'booksList':book});
+			res.render('edit', {id:req.params.id, title:student.title, author:student.author, category:student.category});
+			// res.json(student);
+			// res.render('search',{'studentsList':student});
 
 		}
 	});
 });
 
-//retrieving multiple books
-app.get('/books', (req, res)=>{
-	console.log('Getting all books');
-	Book.find({})
-	.exec((err,books)=>{
+//retrieving multiple students
+app.get('/students', (req, res)=>{
+	console.log('Getting all students');
+	Student.find({})
+	.exec((err,students)=>{
 		if (err) {
 			res.send('Error has occured');
 		}else{
-			// res.send(books);
-			res.render('books',{'booksList':books});
+			// res.send(students);
+			res.render('students',{'studentsList':students});
 		}
 	});
 });
 
-//retrieving one book
-app.get('/books/:id', (req, res)=>{
-	console.log('Getting one book');
-	Book.findOne({
+//retrieving one student
+app.get('/students/:id', (req, res)=>{
+	console.log('Getting one student');
+	Student.findOne({
 		_id:req.params.id
 	})
-	.exec((err,book)=>{
+	.exec((err,student)=>{
 		if (err) {
 			res.send('Error has occured');
 		}else{
-			// res.render('books', {title: book.title, author: book.author, category: book.category});
-			// res.json(book);
-			res.render('search',{'booksList':book});
+			// res.render('students', {title: student.title, author: student.author, category: student.category});
+			// res.json(student);
+			res.render('search',{'studentsList':student});
 
 		}
 	});
 });
 
-//add book
-app.post('/book', (req, res)=>{
-	let newBook = new Book();
+//add student
+app.post('/student', (req, res)=>{
+	let newStudent = new Student();
 
-	newBook.title = req.body.title;
-	newBook.author = req.body.author;
-	newBook.category = req.body.category;
-	newBook.save((err, book)=>{
+	newStudent.first_name = req.body.first_name;
+	newStudent.last_name = req.body.last_name;
+	newStudent.email = req.body.email;
+	newStudent.password = req.body.password;
+	newStudent.phone = req.body.phone;
+	newStudent.news_letter = req.body.news_letter;
+	newStudent.save((err, student)=>{
 		if (err) {
-			res.send('Error saving book');
+			res.send('Error saving student');
 		}else{
 			res.redirect('/');
 		}
 	});
 });
 
-//add book alternative method
-app.post('/book2', (req, res)=>{
-	Book.create(req.body, (err, book)=>{
+//add student alternative method
+app.post('/student2', (req, res)=>{
+	Student.create(req.body, (err, student)=>{
 		if (err) {
 			res.send('Error saving your data');
 			console.log('Error '+err);
 		}else{
-			res.send(book);
+			res.send(student);
 		}
 	});
 });
 
 //update
-app.put('/book/:id', (req, res)=>{
-	Book.findOneAndUpdate({
+app.put('/student/:id', (req, res)=>{
+	Student.findOneAndUpdate({
 		_id:req.params.id
-	}, {$set: {title: req.body.title, author: req.body.author}, category: req.body.category},{upsert: true},(err, newBook)=>{
+	}, {$set: {first_name: req.body.first_name, last_name: req.body.last_name}, email: req.body.email, password: req.body.password,phone: req.body.phone,news_letter: req.body.news_letter},{upsert: true},(err, newStudent)=>{
 		if (err) {
 			console.log('Error '+ err);
 		}else{
-			console.log(newBook);
+			console.log(newStudent);
 			res.sendStatus(204);
 		}
 	});
 });
 //delete
-app.delete('/book/:id', (req, res)=>{
-	Book.findOneAndRemove({
+app.delete('/student/:id', (req, res)=>{
+	Student.findOneAndRemove({
 		_id:req.params.id
-	},(err, book)=>{
+	},(err, student)=>{
 		if (err) {
 			console.log('Error' + err);
 		}else{
