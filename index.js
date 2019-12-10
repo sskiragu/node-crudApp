@@ -8,6 +8,8 @@ const db = "mongodb://localhost:27017/example";
 
  // npm run watch
 
+ app.use(express.static('public'));
+
 app.set('view engine', 'ejs');
 app.use(methodOverride('_method'));
 

@@ -1,0 +1,8 @@
+.my-banner{
+    background-image: url('../images/bg.jpg');
+    background-size: 100%;
+}
+
+.fresh-content{
+    background: linear-gradient(to right, red , blue);
+}
