@@ -10,9 +10,10 @@
       <thead>
         <tr>
           <th>Id</th>
-          <th>Title</th>
-          <th>Author</th>
-          <th>Category</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Phone</th>
           <th colspan="2">Action</th>
         </tr>
       </thead>
@@ -22,9 +23,10 @@
        <tr>
 
          <td><%= studentsList[i].id %></td>
-         <td><%= studentsList[i].title %></td>
-         <td><%= studentsList[i].author %></td>
-         <td><%= studentsList[i].category %></td>
+         <td><%= studentsList[i].first_name %></td>
+         <td><%= studentsList[i].last_name %></td>
+         <td><%= studentsList[i].email %></td>
+         <td><%= studentsList[i].phone %></td>
          <td><a href="/editForm/<%= studentsList[i].id %>">Edit</a></td>
          <td><a href="/student/<%= studentsList[i].id%>?_method=DELETE">Delete</a></td>
        </tr>
